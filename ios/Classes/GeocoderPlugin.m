@@ -39,8 +39,8 @@
   else if ([@"findAddressesFromQuery" isEqualToString:call.method]) {
       NSString *address = call.arguments[@"address"];
       CLLocationCoordinate2D center;
-      centre.latitude = 50.637430;//self.mapView.centerCoordinate.latitude;
-      centre.longitude = 3.056580;//self.mapView.centerCoordinate.longitude;
+      center.latitude = 50.637430;//self.mapView.centerCoordinate.latitude;
+      center.longitude = 3.056580;//self.mapView.centerCoordinate.longitude;
       CLRegion *region = [[CLCircularRegion alloc] initWithCenter:center radius:15000 identifier:@"Bounds"];
       [self initializeGeocoder];
       [self.geocoder geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
